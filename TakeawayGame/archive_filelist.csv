@@ -1,0 +1,7 @@
+﻿Name;Größe;Vorname;Nachname;Downloads;Datum;Pfad
+Token.java;6214;Patrizia;Schalk;37;"17.08.2023 17:30";src/data/Token.java
+EndDialog.java;1915;Patrizia;Schalk;37;"17.08.2023 17:30";src/gui/EndDialog.java
+GamePanel.java;940;Patrizia;Schalk;37;"17.08.2023 17:30";src/gui/GamePanel.java
+StartupDialog.java;1695;Patrizia;Schalk;37;"17.08.2023 17:30";src/gui/StartupDialog.java
+TakeawayFrame.java;5225;Patrizia;Schalk;37;"17.08.2023 17:30";src/gui/TakeawayFrame.java
+Main.java;1542;Patrizia;Schalk;37;"17.08.2023 17:30";src/main/Main.java

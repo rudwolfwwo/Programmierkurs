@@ -1,0 +1,4 @@
+﻿Name;Größe;Vorname;Nachname;Downloads;Datum;Pfad
+Sudoku.java;7363;Patrizia;Schalk;30;"17.08.2023 16:51";src/data/Sudoku.java
+SudokuWindow.java;3727;Patrizia;Schalk;30;"17.08.2023 16:51";src/gui/SudokuWindow.java
+SudokuMain.java;7465;Patrizia;Schalk;30;"17.08.2023 16:51";src/main/SudokuMain.java

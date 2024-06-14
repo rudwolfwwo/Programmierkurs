@@ -1,0 +1,9 @@
+﻿Name;Größe;Vorname;Nachname;Downloads;Datum;Pfad
+Position.java;1617;Patrizia;Schalk;30;"11.08.2023 17:24";src/data/Position.java
+Tier.java;4222;Patrizia;Schalk;30;"11.08.2023 17:24";src/data/Tier.java
+bunny.png;185378;Patrizia;Schalk;30;"11.08.2023 17:24";src/data/img/bunny.png
+turtle.png;317405;Patrizia;Schalk;29;"11.08.2023 17:24";src/data/img/turtle.png
+RacePanel.java;1060;Patrizia;Schalk;28;"11.08.2023 17:24";src/gui/RacePanel.java
+RaceWindow.java;2825;Patrizia;Schalk;27;"11.08.2023 17:24";src/gui/RaceWindow.java
+WinnerDialog.java;954;Patrizia;Schalk;27;"11.08.2023 17:24";src/gui/WinnerDialog.java
+Main.java;681;Patrizia;Schalk;28;"11.08.2023 17:24";src/main/Main.java
