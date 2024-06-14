@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>0</y>
+      <w>480</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>+Sudoku
+--
+-SIZE:Integer {readonly}
+-board:Integer[0..] {Integer between 0 and SIZE}
+-strat:SolvingStrategy
+--
++Sudoku(size:Integer) {size is Squarenumer}
++getBoardEntry(in index:Integer):Integer {0 &lt;= index &lt; SIZE^2}
++getBoardEntry(in row:Integer,in column:Integer):Integer 
+{0 &lt;= row and column &lt; SIZE}
++setBoardEntry(in index:Integer,in value:Integer) 
+{0 &lt;= index &lt; SIZE^2 and 0 &lt;= value &lt;= SIZE}
++setBoardEntry(in row:Integer,in column:Integer,in value:Integer) 
+{0 &lt;= row and column &lt; SIZE and 0 &lt;= value &lt;= SIZE}
++getBoardSize():Integer
++checkBoard():Boolean
++solve():Boolean
++setSolver(in strat:SolvingStrategy)
++getSolver():SolvingStrategy
++addPropertyChangeListener(in l: java.beans.PropertyChangeListener)
++removePropertyChangeListener(in l: java.beans.PropertyChangeListener)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>50</y>
+      <w>480</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>+java.beans.PropertyChangeSupport
+--
++addPropertyChangeListener(in l: java.beans.PropertyChangeListener)
++removePropertyChangeListener(in l:java.beans.PropertyChangeListener)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>40</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-changes</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>390</y>
+      <w>440</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>SudokuWindow
+--
+-WIDTH:Integer = 30 {readonly}
+-HEIGHT:Integer = 30 {readonly}
+--
++SudokuWindow(b:Sudoku,size:Integer,colors:Color[0..])
++actionPerformed(e:java.awt.event.ActionEvent) {redefined}
++propertyChange(evt:java.beans.PropertyChangeEvent) {redefined}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>400</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>+javax.swing.JFrame</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>400</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>450</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>450</y>
+      <w>310</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;inteface&gt;&gt;
++java.awt.event.ActionListener
+--
+actionPerformed(e:java.awt.event.ActionEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>500</y>
+      <w>90</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>70.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>550</y>
+      <w>360</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
++java.beans.PropertyChangeListener
+--
+propertyChange(evt:java.beans.PropertyChangeEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>320</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=-board</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>340</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>+javax.swing.JPanel
+--
++paintComponent(g:Graphics)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>340</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r2=-canvas</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>450</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>+javax.swing.JButton</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>440</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+-start</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+</diagram>
